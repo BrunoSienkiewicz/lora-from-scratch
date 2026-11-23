@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+data/
+outputs/
+runs/
+wandb/
+*.pt
+*.safetensors
+.DS_Store

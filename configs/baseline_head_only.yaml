@@ -1,0 +1,13 @@
+# Wstępna konfiguracja - do uzgodnienia z prowadzącym (zob. README, otwarte pytania)
+model_name: facebook/opt-125m
+task: TBD            # np. sst2 / ag_news
+max_len: 128
+seed: 42
+batch_size: 32
+lr: 1.0e-3
+epochs: 3
+mode: head_only      # head_only | lora | full
+lora:
+  rank: 8
+  alpha: 16
+  target_modules: [q_proj, v_proj]

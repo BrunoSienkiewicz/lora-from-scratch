@@ -1,0 +1,29 @@
+[project]
+name = "lora-project"
+version = "0.1.0"
+description = "GSN 26Z: LoRA od środka - własna implementacja LoRA na OPT-125M"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2",
+    "transformers>=4.40",
+    "datasets>=2.18",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "tqdm",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter", "nbformat", "peft"]  # peft tylko do weryfikacji własnej implementacji
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
